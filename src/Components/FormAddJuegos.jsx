@@ -40,7 +40,7 @@ const FormAddJuegos=({setType, setPrice, type, price, setJuegos, juegos, editId,
         <div className="add-juegos"> 
             <h3>Agregar Juegos</h3>
             <form onSubmit={handleJuegos}> 
-                <p>Servicio</p>
+                <p>Juegos</p>
                 <select onChange={e => setType(e.target.value)} value={type}>
                     <option value="">Elegir</option>
                     <option value="csgo2">Counter Strike 2</option>
