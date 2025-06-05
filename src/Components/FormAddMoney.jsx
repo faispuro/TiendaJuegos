@@ -16,10 +16,10 @@ const FormAddMoney=({setCount, setIsValid})=> {
     }
     return (
         <div className="form-add-money">
-            {input}
+            
             <form onSubmit={handleForm}>
-                <p>Agregar Presupuesto</p>
-                <input type="number" placeholder="$ Presupuesto" onChange={e=>setInput(e.target.value)}/>
+                <p>Monto a Ingresar</p>
+                <input type="number" placeholder="$ " onChange={e=>setInput(e.target.value)}/>
                 <input type="submit" value="Agregar" />
             </form>
             {error ? <p className="error">Presupuesto Invalido</p> : null}

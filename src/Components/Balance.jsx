@@ -1,24 +1,16 @@
-import {moneyFormat} from "../helpers";
-import { useState, useEffect } from "react";
-const Balance=({count, juegos, spent, setSpent})=>{
-    
+import { moneyFormat } from "../helpers";
 
-    const updateBalance=()=>{
-        const spent = juegos.reduce((total, juego)=> Number(juego.price) + total, 0);
-        setSpent(spent);
-    }
+const Balance = ({ count, carrito }) => {
+  const spent = carrito.reduce((total, juego) => total + Number(juego.precio), 0);
+  const disponible = count - spent;
 
-    useEffect(()=>{
-        updateBalance();
-    },[juegos]);
+  return (
+    <div className="balance">
+      <h3>Presupuesto: {moneyFormat(count)}</h3>
+      <p><strong>Total gastado:</strong> {moneyFormat(spent)}</p>
+      <p><strong>Presupuesto disponible:</strong> {moneyFormat(disponible)}</p>
+    </div>
+  );
+};
 
-    return(
-        <div className="balance">
-            <h3>Presupuesto:{moneyFormat(count)}</h3>
-            <h3>Dispoible:{moneyFormat(count-spent)}</h3>
-            <h3>Gastado:{moneyFormat(spent)}</h3>
-
-        </div>
-    );
-}
 export default Balance;

@@ -1,22 +1,16 @@
-import SimgleItem from "./SimgleItem";
+const DisplayItems = ({ juegos, agregarAlCarrito }) => {
+  if (!juegos.length) return <p>No hay juegos para mostrar.</p>;
 
-const DisplayItems=({juegos, eliminarItem, editItem})=>{
-    return(
-        <>
-            <h2>Compras</h2>
-            {
-                juegos.map(item=>(
-                <SimgleItem 
-                key={item.id}
-                id={item.id} 
-                price={item.price} 
-                type={item.type}
-                eliminarItem={eliminarItem} 
-                editItem={editItem}
-                />
-                ))
-            }
-        </>
-    );
-}
+  return (
+    <ul>
+      {juegos.map(juego => (
+        <li key={juego._id}>
+          {juego.nombre} - ${juego.precio}
+          <button onClick={() => agregarAlCarrito(juego)}>Agregar al carrito</button>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 export default DisplayItems;
