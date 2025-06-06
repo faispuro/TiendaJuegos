@@ -10,10 +10,9 @@ API REST y sitio web para gestionar una tienda de juegos utilizando **Node.js**,
 - [Tecnologías](#tecnologías)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Endpoints](#endpoints)
+- [Backend](#backend)
 - [Frontend](#frontend)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
+
 
 ---
 
