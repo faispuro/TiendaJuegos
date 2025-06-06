@@ -70,3 +70,6 @@ Este proyecto incluye un backend API para administrar una tienda de juegos con b
 
 
 El frontend consume la API del backend para mostrar y administrar los juegos en la tienda. Asegúrate que ambos servidores (backend y frontend) estén corriendo para poder usar la aplicación correctamente.
+
+![image](https://github.com/user-attachments/assets/a258b5ed-50df-44eb-a23b-a8fb99e21ada)
+
